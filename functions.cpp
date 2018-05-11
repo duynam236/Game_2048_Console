@@ -417,12 +417,14 @@ void Copy()
 
 bool Check_Move()
 {
-	for (int i=0;i<4;i++) {
-		for (int j=0;j<4;j++) {
-			if (Map[i][j]!=Map[i][j]) return true;
-		}
-	}
-	return false;
+    bool Check=false;
+	for (int i=0;i<4;i++)
+		for (int j=0;j<4;j++)
+			if (Map[i][j]!=Map1[i][j]) Check=true;
+
+
+
+	return Check;
 }
 
 // Ham kiem tra game ket thuc
