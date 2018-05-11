@@ -15,6 +15,7 @@ int main()
 	cout << "                            ";
 
 	Start_Map();
+	DrawBackground();
 	while (true)
 	{
 		ConTro(false);
