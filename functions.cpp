@@ -324,7 +324,7 @@ void Right()
 				}
 			}
 		}
-		for (int j=k;j>=0;k--) Map[i][j]=0;
+		for (int j=k;j>=0;j--) Map[i][j]=0;
 	}
 }
 
@@ -364,27 +364,30 @@ void DrawGame()
 	cout << "Nhan E de thoat tro choi";
 	for (int i=0;i<4;i++)
 		for (int j=0;j<4;j++)
-				if (Map[j][i]!=0)
+				if (Map[j][i]==0)
 		{
-			Color(SetColor(Map[j][i]));
+		    Color(0);
+			gotoXY(1+7*i,2+4*j);
+			cout << (char)219 << (char)219 << (char)219 << (char)219 << (char)219 << (char)219;
+
+		}
+		else
+		{
 			if (Map[j][i]<100)
 			{
+			    Color(0);
+                gotoXY(1+7*i,2+4*j);
+                cout << (char)219 << (char)219 << (char)219 << (char)219 << (char)219 << (char)219;
+                Color(SetColor(Map[j][i]));
 				gotoXY(3+7*i,2+4*j);
 				cout << Map[j][i];
 			}
 			else
 			{
+			    Color(SetColor(Map[j][i]));
 				gotoXY(2+7*i,2+4*j);
 				cout << Map[j][i];
 			}
-		}
-		else
-		{
-			Color(0);
-			gotoXY(1+7*i,2+4*j);
-			cout << (char)219 << (char)219 << (char)219 << (char)219 << (char)
-
-219 << (char)219;
 		}
 }
 
