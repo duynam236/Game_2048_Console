@@ -15,14 +15,11 @@ void ConTro(bool CursorVisibility);
 // Ham tao mau
 void Color(int x);
 
-// Ham dat mau cho gia tri
+// Ham dat mau cho tung gia tri
 int SetColor(int x);
 
 // Ham di chuyen con tro den vi tri (x,y)
 void gotoXY(int column, int line);
-
-// Ham xoa man hinh
-void DeleteScreen();
 
 // Ham ve background
 void DrawBackground();
