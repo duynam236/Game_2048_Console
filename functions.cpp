@@ -20,7 +20,7 @@ void Color(int x) {
 	SetConsoleTextAttribute(mau,x);
 }
 
-// Ham dat mau cho gia tri
+// Ham dat mau cho tung gia tri
 int SetColor(int x)
 {
     int a;
@@ -50,7 +50,7 @@ void gotoXY(int column, int line)
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-// Ham ve background
+// Ham ve khung game
 void DrawBackground() {
 	Color(13);
 	for (int i=1;i<=3;i++)
@@ -127,7 +127,7 @@ void WriteHighScore(int a)
 	filescore.close();
 }
 
-// Ham tao gia tri ban dau
+// Ham khoi tao gia tri ban dau
 void Start_Map()
 {
 	DrawBackground();
@@ -158,6 +158,7 @@ void Start_Map()
 
 // Cac ham di chuyen
 
+// Di chuyen len tren
 void Up()
 {
 	// Dua cac gia tri len phia tren
@@ -197,6 +198,7 @@ void Up()
 
 }
 
+// Di chuyen xuong duoi
 void Down()
 {
 	// Dua cac gia tri xuong phia duoi
@@ -235,6 +237,7 @@ void Down()
 
 }
 
+// Di chuyen sang trai
 void Left()
 {
 	// Dua cac gia tri sang ben trai
@@ -272,6 +275,7 @@ void Left()
 
 }
 
+// Di chuyen sang phai
 void Right()
 {
 	// Dua cac gia tri sang ben phai
@@ -317,32 +321,32 @@ void DrawGame()
 		WriteHighScore(Score);
 	gotoXY(40,2);
 	Color(14);
-	cout << "Diem cua ban: ";
+	cout << "Your score: ";
 	Color(11);
 	cout << Score;
 	gotoXY(40,3);
 	Color(14);
-	cout << "Diem cao nhat: ";
+	cout << "High score: ";
 	Color(11);
 	cout << HighScore();
 	gotoXY(40,5);
 	Color(2);
-	cout << "Huong dan:";
+	cout << "Guide:";
 	gotoXY(44,7);
 	Color(4);
-	cout << "A: Sang trai";
+	cout << "Press A: To the left.";
 	gotoXY(44,8);
 	Color(5);
-	cout << "D: Sang phai";
+	cout << "Press D: To the right.";
 	gotoXY(44,9);
 	Color(6);
-	cout << "W: Len tren";
+	cout << "Press W: Go up.";
 	gotoXY(44,10);
 	Color(7);
-	cout << "S: Xuong duoi";
+	cout << "Press S: Go down.";
 	gotoXY(40,12);
 	Color(10);
-	cout << "Nhan E de thoat tro choi";
+	cout << "Press E to exit game!";
 	for (int i=0;i<4;i++)
 		for (int j=0;j<4;j++)
 				if (Map[j][i]==0)
