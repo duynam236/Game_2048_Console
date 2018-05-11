@@ -130,7 +130,6 @@ void WriteHighScore(int a)
 // Ham khoi tao gia tri ban dau
 void Start_Map()
 {
-	DrawBackground();
 
 	Score = 0;
 	for (int i=0;i<4;i++)
