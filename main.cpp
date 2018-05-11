@@ -30,10 +30,22 @@ int main()
 
 		Copy();
 
-		if (click=='w'||click=='W') Up();
-		else if (click=='s'||click=='S') Down();
-		else if (click=='a'||click=='A') Left();
-		else if (click=='d'||click=='D') Right();
+		if (click=='w'||click=='W') {
+                Up();
+                New_Map();
+		}
+		else if (click=='s'||click=='S') {
+                Down();
+                New_Map();
+		}
+		else if (click=='a'||click=='A') {
+                Left();
+                New_Map();
+		}
+		else if (click=='d'||click=='D') {
+                Right();
+                New_Map();
+		}
 		else if (click=='e'||click=='E') exit(true);
 		else continue;
 
